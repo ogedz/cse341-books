@@ -1,5 +1,5 @@
 import app from './app.js';
-import { connectToDb } from './src/db/connect.js';
+import { connectToDb, getDb } from './src/db/connect.js';
 
 const PORT = process.env.PORT;
 
@@ -11,6 +11,7 @@ const startServer = async () => {
   try {
     await connectToDb();
     console.log('Connected to MongoDB');
+    
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
