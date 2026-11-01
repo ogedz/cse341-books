@@ -1,3 +1,5 @@
+// Week 01 Assignment Final Review
+
 import express from 'express';
 import router from './src/router.js';
 
@@ -9,6 +11,6 @@ app.get('/', (req, res) => {
   return res.status(200).json({ message: 'Server is running' });
 });
 
-app.use(router); // <-- Make sure this line is here!
+app.use(router);
 
 export default app;
